@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Your Recipe</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="submit_recipe.html">Submit Recipe</a></li>
+            <li><a href="discover_recipes.html">Discover Recipes</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Submit Your Recipe</h1>
+    </header>
+
+    <main>
+        <form id="recipeForm" action="/submit_recipe" method="POST"> <!-- Form submits to backend endpoint -->
+            <label for="recipeTitle">Recipe Title:</label>
+            <input type="text" id="recipeTitle" name="recipeTitle" required>
+
+            <label for="recipeDescription">Description:</label>
+            <textarea id="recipeDescription" name="recipeDescription" rows="4" required></textarea>
+
+            <label for="recipeIngredients">Ingredients:</label>
+            <textarea id="recipeIngredients" name="recipeIngredients" rows="6" required></textarea>
+
+            <label for="recipeInstructions">Instructions:</label>
+            <textarea id="recipeInstructions" name="recipeInstructions" rows="10" required></textarea>
+
+            <label for="recipeImage">Upload Image:</label>
+            <input type="file" id="recipeImage" name="recipeImage" accept="image/*">
+
+            <button type="submit">Submit Recipe</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Sharing Platform</p>
+    </footer>
+
+    
+</body>
+</html>
